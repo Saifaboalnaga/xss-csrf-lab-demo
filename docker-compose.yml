@@ -1,0 +1,9 @@
+services:
+  lab:
+    build: .
+    container_name: xss-csrf-lab
+    # Bound to 127.0.0.1 only: the lab is intentionally vulnerable and must not be reachable from the network
+    ports:
+      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:4000:4000"
+    restart: "no"
